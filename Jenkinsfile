@@ -39,10 +39,8 @@ pipeline {
 	    }
 	    steps {
 	        sh '''
-                    // instalacja jako regular user
-                    npm install serve
-                    // uruchomienie jako regular user
-                    node_modules/.bin/serve -s build
+                    npm install serve # instalacja jako regular user
+                    node_modules/.bin/serve -s build # uruchomienie jako regular user
                     npx playwright test
 		'''
             }
