@@ -42,7 +42,7 @@ pipeline {
                     npm install serve # instalacja jako regular user
                     node_modules/.bin/serve -s build & # uruchomienie jako regular user
                     sleep 10
-                    npx playwright test
+                    npx playwright test --reporter=html
 		'''
             }
         }
